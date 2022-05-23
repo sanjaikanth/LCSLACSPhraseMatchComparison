@@ -1,0 +1,7 @@
+Class,Total,LCSCorrectPrediction,LCSAccuracy
+Disinformative,34,18,53
+Real,24,9,38
+Fake,52,43,83
+MisInformative,35,17,49
+Unverified,44,28,64
+Total,189,115,61

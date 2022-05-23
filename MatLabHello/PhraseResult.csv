@@ -1,0 +1,7 @@
+Class,Total,PhraseMatchedCorrectPrediction,PhraseMatchedAccuracy
+Disinformative,34,23,68
+Real,24,10,42
+Fake,52,46,88
+MisInformative,35,20,57
+Unverified,44,25,57
+Total,189,124,66

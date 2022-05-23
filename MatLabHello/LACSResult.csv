@@ -1,0 +1,7 @@
+Class,Total,LACSCorrectPrediction,LACSAccuracy
+Disinformative,34,27,79
+Real,24,10,42
+Fake,52,50,96
+MisInformative,35,23,66
+Unverified,44,31,70
+Total,189,141,75
