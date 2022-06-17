@@ -182,7 +182,22 @@ def FindSimilarityPhrase(strX,strY):
 
 
 # In[7]:
-
+def PlotChart(dfTest):
+    countTrue=0
+    countFalse=0
+    CountTotal=0
+    arrPercentValues=[]
+    arrCount=[]
+    for indexTest, rowTest in dfTest.iterrows():
+        isTrue= 1 if rowTest.Result else 0
+        isFalse= 0 if rowTest.Result else 1
+        countTrue=countTrue+isTrue
+        countFalse=countFalse+isFalse
+        intPercentage=countTrue*100/(indexTest+1)
+        arrPercentValues.append(intPercentage)
+        arrCount.append(indexTest+1)
+    df = pd.DataFrame({"Index" : arrCount, "Percent" : arrPercentValues})
+    df.to_csv("PlotPhrase.csv", index=False)
 
 def getResult():
     #Loading Data
@@ -251,4 +266,5 @@ def getResult():
     dr={'Class':'Total','Total':dfTest.shape[0],'PhraseMatchedCorrectPrediction':totalCorrectCount,'PhraseMatchedAccuracy':round(100*totalCorrectCount/dfTest.shape[0]) }
     dfSUmmary=dfSUmmary.append(dr,ignore_index = True )
     dfSUmmary.to_csv('PhraseResult.csv',index=False)
+    PlotChart(dfTest)
 
