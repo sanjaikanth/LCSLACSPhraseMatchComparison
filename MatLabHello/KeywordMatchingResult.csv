@@ -1,0 +1,7 @@
+Class,Total,KeywordMatching Correct Prediction,KeywordMatching Accuracy
+Disinformative,34,26,76
+Real,24,11,46
+Fake,52,49,94
+MisInformative,35,24,69
+Unverified,44,26,59
+Total,189,136,72
